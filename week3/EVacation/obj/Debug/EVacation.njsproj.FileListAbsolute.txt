@@ -1,0 +1,2 @@
+D:\Documents\Project\EVacation\EVacation\obj\Debug\EVacation.njsprojResolveAssemblyReference.cache
+D:\Documents\Project\EVacation\EVacation\bin\Microsoft.NodejsTools.WebRole.dll

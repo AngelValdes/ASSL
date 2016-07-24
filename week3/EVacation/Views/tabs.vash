@@ -1,0 +1,84 @@
+﻿@html.extend("layout", function(model){
+  @html.block("body", function(model){
+  <div id="content">
+	<h1>Welcome @model.data.first @model.data.last !</h1>
+	<h2>@model.message</h2>
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+        <li><a href="#orange" data-toggle="tab">Reservations</a></li>
+    </ul>
+<div id="my-tab-content" class="tab-content">
+    <div class="tab-pane active" id="profile">
+        <br/>
+        <div class="mycontainer">
+            <div class="row centered-form">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">User Profile <small>Update your info!</small></h3>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/api/users/@model.data.id" method="POST">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">	
+                                            <input type="text" name="first" id="first" class="form-control input-sm" placeholder="First Name" value="@model.data.first">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="last" id="last" class="form-control input-sm" placeholder="Last Name" value="@model.data.last">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address" value="@model.data.email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password" value="@model.data.password">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="phone" id="phone" class="form-control input-sm" placeholder="Phone Number" value="@model.data.phone">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2 pull-right">
+                                                <input type="submit" value="Save" class="btn btn-info btn-block">
+                                            </div>                                               
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+    <div class="tab-pane" id="orange">
+	 <br/>
+	  <div class="row">
+	    <div class="col-md-6">
+           <img src="./images/1.jpg" alt="" width="325px" height="175px">
+        </div>
+	    <div class="col-md-6">
+           <img src="./images/2.jpg" alt="" width="325px" height="175px">
+        </div>
+	  </div>
+	  <br/>
+	  <div class="row">
+	    <div class="col-md-12">
+           <img src="./images/3.jpg" alt="" width="650px" height="200px">
+        </div>	
+	  </div>
+
+	 </div>
+
+</div>
+	
+</div>
+
+
+	   
+  });
+})
