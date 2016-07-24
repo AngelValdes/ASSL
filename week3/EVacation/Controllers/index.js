@@ -6,4 +6,4 @@
         usersController.init(app);
         appController.init(app);
     };
-})(module.exports);
+})(module.exports);  
