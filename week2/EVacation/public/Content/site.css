@@ -1,0 +1,17 @@
+body{
+    font: 14px Helvetica, Arial, Sans-serif;
+    color: #0000CC;
+    background-color: #525252;
+}
+.textError{
+    color: #FF0000;
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}

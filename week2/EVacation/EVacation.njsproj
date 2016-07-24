@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>EVacation</Name>
+    <RootNamespace>EVacation</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>041e9277-5ff0-4d5c-85d9-5c2c32296994</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ProjectFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\api\usersController.js" />
+    <Compile Include="Controllers\appController.js" />
+    <Compile Include="Controllers\index.js" />
+    <Compile Include="public\Scripts\bootstrap\dist\js\bootstrap.js" />
+    <Compile Include="public\Scripts\bootstrap\dist\js\bootstrap.min.js" />
+    <Compile Include="public\Scripts\bootstrap\dist\js\npm.js" />
+    <Compile Include="public\Scripts\bootstrap\Gruntfile.js" />
+    <Compile Include="public\Scripts\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Compile Include="public\Scripts\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Compile Include="public\Scripts\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Compile Include="public\Scripts\bootstrap\js\affix.js" />
+    <Compile Include="public\Scripts\bootstrap\js\alert.js" />
+    <Compile Include="public\Scripts\bootstrap\js\button.js" />
+    <Compile Include="public\Scripts\bootstrap\js\carousel.js" />
+    <Compile Include="public\Scripts\bootstrap\js\collapse.js" />
+    <Compile Include="public\Scripts\bootstrap\js\dropdown.js" />
+    <Compile Include="public\Scripts\bootstrap\js\modal.js" />
+    <Compile Include="public\Scripts\bootstrap\js\popover.js" />
+    <Compile Include="public\Scripts\bootstrap\js\scrollspy.js" />
+    <Compile Include="public\Scripts\bootstrap\js\tab.js" />
+    <Compile Include="public\Scripts\bootstrap\js\tooltip.js" />
+    <Compile Include="public\Scripts\bootstrap\js\transition.js" />
+    <Compile Include="public\Scripts\jquery\dist\jquery.js" />
+    <Compile Include="public\Scripts\jquery\dist\jquery.min.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\jsonp.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\load.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\parseJSON.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\parseXML.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\script.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\var\nonce.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\var\rquery.js" />
+    <Compile Include="public\Scripts\jquery\src\ajax\xhr.js" />
+    <Compile Include="public\Scripts\jquery\src\attributes.js" />
+    <Compile Include="public\Scripts\jquery\src\attributes\attr.js" />
+    <Compile Include="public\Scripts\jquery\src\attributes\classes.js" />
+    <Compile Include="public\Scripts\jquery\src\attributes\prop.js" />
+    <Compile Include="public\Scripts\jquery\src\attributes\support.js" />
+    <Compile Include="public\Scripts\jquery\src\attributes\val.js" />
+    <Compile Include="public\Scripts\jquery\src\callbacks.js" />
+    <Compile Include="public\Scripts\jquery\src\core.js" />
+    <Compile Include="public\Scripts\jquery\src\core\access.js" />
+    <Compile Include="public\Scripts\jquery\src\core\init.js" />
+    <Compile Include="public\Scripts\jquery\src\core\parseHTML.js" />
+    <Compile Include="public\Scripts\jquery\src\core\ready.js" />
+    <Compile Include="public\Scripts\jquery\src\core\var\rsingleTag.js" />
+    <Compile Include="public\Scripts\jquery\src\css.js" />
+    <Compile Include="public\Scripts\jquery\src\css\addGetHookIf.js" />
+    <Compile Include="public\Scripts\jquery\src\css\curCSS.js" />
+    <Compile Include="public\Scripts\jquery\src\css\defaultDisplay.js" />
+    <Compile Include="public\Scripts\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Compile Include="public\Scripts\jquery\src\css\support.js" />
+    <Compile Include="public\Scripts\jquery\src\css\swap.js" />
+    <Compile Include="public\Scripts\jquery\src\css\var\cssExpand.js" />
+    <Compile Include="public\Scripts\jquery\src\css\var\getStyles.js" />
+    <Compile Include="public\Scripts\jquery\src\css\var\isHidden.js" />
+    <Compile Include="public\Scripts\jquery\src\css\var\rmargin.js" />
+    <Compile Include="public\Scripts\jquery\src\css\var\rnumnonpx.js" />
+    <Compile Include="public\Scripts\jquery\src\data.js" />
+    <Compile Include="public\Scripts\jquery\src\data\accepts.js" />
+    <Compile Include="public\Scripts\jquery\src\data\Data.js" />
+    <Compile Include="public\Scripts\jquery\src\data\var\data_priv.js" />
+    <Compile Include="public\Scripts\jquery\src\data\var\data_user.js" />
+    <Compile Include="public\Scripts\jquery\src\deferred.js" />
+    <Compile Include="public\Scripts\jquery\src\deprecated.js" />
+    <Compile Include="public\Scripts\jquery\src\dimensions.js" />
+    <Compile Include="public\Scripts\jquery\src\effects.js" />
+    <Compile Include="public\Scripts\jquery\src\effects\animatedSelector.js" />
+    <Compile Include="public\Scripts\jquery\src\effects\Tween.js" />
+    <Compile Include="public\Scripts\jquery\src\event.js" />
+    <Compile Include="public\Scripts\jquery\src\event\alias.js" />
+    <Compile Include="public\Scripts\jquery\src\event\support.js" />
+    <Compile Include="public\Scripts\jquery\src\exports\amd.js" />
+    <Compile Include="public\Scripts\jquery\src\exports\global.js" />
+    <Compile Include="public\Scripts\jquery\src\intro.js" />
+    <Compile Include="public\Scripts\jquery\src\jquery.js" />
+    <Compile Include="public\Scripts\jquery\src\manipulation.js" />
+    <Compile Include="public\Scripts\jquery\src\manipulation\support.js" />
+    <Compile Include="public\Scripts\jquery\src\manipulation\var\rcheckableType.js" />
+    <Compile Include="public\Scripts\jquery\src\manipulation\_evalUrl.js" />
+    <Compile Include="public\Scripts\jquery\src\offset.js" />
+    <Compile Include="public\Scripts\jquery\src\outro.js" />
+    <Compile Include="public\Scripts\jquery\src\queue.js" />
+    <Compile Include="public\Scripts\jquery\src\queue\delay.js" />
+    <Compile Include="public\Scripts\jquery\src\selector-native.js" />
+    <Compile Include="public\Scripts\jquery\src\selector-sizzle.js" />
+    <Compile Include="public\Scripts\jquery\src\selector.js" />
+    <Compile Include="public\Scripts\jquery\src\serialize.js" />
+    <Compile Include="public\Scripts\jquery\src\sizzle\dist\sizzle.js" />
+    <Compile Include="public\Scripts\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Compile Include="public\Scripts\jquery\src\traversing.js" />
+    <Compile Include="public\Scripts\jquery\src\traversing\findFilter.js" />
+    <Compile Include="public\Scripts\jquery\src\traversing\var\rneedsContext.js" />
+    <Compile Include="public\Scripts\jquery\src\var\arr.js" />
+    <Compile Include="public\Scripts\jquery\src\var\class2type.js" />
+    <Compile Include="public\Scripts\jquery\src\var\concat.js" />
+    <Compile Include="public\Scripts\jquery\src\var\hasOwn.js" />
+    <Compile Include="public\Scripts\jquery\src\var\indexOf.js" />
+    <Compile Include="public\Scripts\jquery\src\var\pnum.js" />
+    <Compile Include="public\Scripts\jquery\src\var\push.js" />
+    <Compile Include="public\Scripts\jquery\src\var\rnotwhite.js" />
+    <Compile Include="public\Scripts\jquery\src\var\slice.js" />
+    <Compile Include="public\Scripts\jquery\src\var\strundefined.js" />
+    <Compile Include="public\Scripts\jquery\src\var\support.js" />
+    <Compile Include="public\Scripts\jquery\src\var\toString.js" />
+    <Compile Include="public\Scripts\jquery\src\wrap.js" />
+    <Compile Include="server.js" />
+    <Content Include="public\Content\cover.css" />
+    <Content Include="public\images\Camping.jpg" />
+    <Content Include="package.json" />
+    <Content Include="public\Content\site.css" />
+    <Content Include="public\Scripts\bootstrap\.bower.json" />
+    <Content Include="public\Scripts\bootstrap\bower.json" />
+    <Content Include="public\Scripts\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="public\Scripts\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="public\Scripts\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="public\Scripts\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="public\Scripts\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="public\Scripts\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="public\Scripts\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\Scripts\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\Scripts\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\Scripts\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\Scripts\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\Scripts\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\Scripts\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\Scripts\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\Scripts\bootstrap\grunt\.jshintrc" />
+    <Content Include="public\Scripts\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="public\Scripts\bootstrap\js\.jscsrc" />
+    <Content Include="public\Scripts\bootstrap\js\.jshintrc" />
+    <Content Include="public\Scripts\bootstrap\less\.csscomb.json" />
+    <Content Include="public\Scripts\bootstrap\less\.csslintrc" />
+    <Content Include="public\Scripts\bootstrap\less\alerts.less" />
+    <Content Include="public\Scripts\bootstrap\less\badges.less" />
+    <Content Include="public\Scripts\bootstrap\less\bootstrap.less" />
+    <Content Include="public\Scripts\bootstrap\less\breadcrumbs.less" />
+    <Content Include="public\Scripts\bootstrap\less\button-groups.less" />
+    <Content Include="public\Scripts\bootstrap\less\buttons.less" />
+    <Content Include="public\Scripts\bootstrap\less\carousel.less" />
+    <Content Include="public\Scripts\bootstrap\less\close.less" />
+    <Content Include="public\Scripts\bootstrap\less\code.less" />
+    <Content Include="public\Scripts\bootstrap\less\component-animations.less" />
+    <Content Include="public\Scripts\bootstrap\less\dropdowns.less" />
+    <Content Include="public\Scripts\bootstrap\less\forms.less" />
+    <Content Include="public\Scripts\bootstrap\less\glyphicons.less" />
+    <Content Include="public\Scripts\bootstrap\less\grid.less" />
+    <Content Include="public\Scripts\bootstrap\less\input-groups.less" />
+    <Content Include="public\Scripts\bootstrap\less\jumbotron.less" />
+    <Content Include="public\Scripts\bootstrap\less\labels.less" />
+    <Content Include="public\Scripts\bootstrap\less\list-group.less" />
+    <Content Include="public\Scripts\bootstrap\less\media.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\alerts.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\buttons.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\center-block.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\forms.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\gradients.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\grid.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\image.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\labels.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\list-group.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\opacity.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\pagination.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\panels.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\resize.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\size.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\table-row.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="public\Scripts\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="public\Scripts\bootstrap\less\modals.less" />
+    <Content Include="public\Scripts\bootstrap\less\navbar.less" />
+    <Content Include="public\Scripts\bootstrap\less\navs.less" />
+    <Content Include="public\Scripts\bootstrap\less\normalize.less" />
+    <Content Include="public\Scripts\bootstrap\less\pager.less" />
+    <Content Include="public\Scripts\bootstrap\less\pagination.less" />
+    <Content Include="public\Scripts\bootstrap\less\panels.less" />
+    <Content Include="public\Scripts\bootstrap\less\popovers.less" />
+    <Content Include="public\Scripts\bootstrap\less\print.less" />
+    <Content Include="public\Scripts\bootstrap\less\progress-bars.less" />
+    <Content Include="public\Scripts\bootstrap\less\responsive-embed.less" />
+    <Content Include="public\Scripts\bootstrap\less\responsive-utilities.less" />
+    <Content Include="public\Scripts\bootstrap\less\scaffolding.less" />
+    <Content Include="public\Scripts\bootstrap\less\tables.less" />
+    <Content Include="public\Scripts\bootstrap\less\theme.less" />
+    <Content Include="public\Scripts\bootstrap\less\thumbnails.less" />
+    <Content Include="public\Scripts\bootstrap\less\tooltip.less" />
+    <Content Include="public\Scripts\bootstrap\less\type.less" />
+    <Content Include="public\Scripts\bootstrap\less\utilities.less" />
+    <Content Include="public\Scripts\bootstrap\less\variables.less" />
+    <Content Include="public\Scripts\bootstrap\less\wells.less" />
+    <Content Include="public\Scripts\bootstrap\LICENSE" />
+    <Content Include="public\Scripts\bootstrap\package.json" />
+    <Content Include="public\Scripts\bootstrap\README.md" />
+    <Content Include="public\Scripts\jquery\.bower.json" />
+    <Content Include="public\Scripts\jquery\bower.json" />
+    <Content Include="public\Scripts\jquery\dist\jquery.min.map" />
+    <Content Include="public\Scripts\jquery\MIT-LICENSE.txt" />
+    <Content Include="public\Scripts\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="README.md" />
+    <Content Include="Views\register.vash" />
+    <Content Include="Views\index.vash" />
+    <Content Include="Views\layout.vash" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\api\" />
+    <Folder Include="Models\" />
+    <Folder Include="public\" />
+    <Folder Include="public\Content\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\Scripts\" />
+    <Folder Include="public\Scripts\bootstrap\" />
+    <Folder Include="public\Scripts\bootstrap\dist\" />
+    <Folder Include="public\Scripts\bootstrap\dist\css\" />
+    <Folder Include="public\Scripts\bootstrap\dist\fonts\" />
+    <Folder Include="public\Scripts\bootstrap\dist\js\" />
+    <Folder Include="public\Scripts\bootstrap\fonts\" />
+    <Folder Include="public\Scripts\bootstrap\grunt\" />
+    <Folder Include="public\Scripts\bootstrap\js\" />
+    <Folder Include="public\Scripts\bootstrap\less\" />
+    <Folder Include="public\Scripts\bootstrap\less\mixins\" />
+    <Folder Include="public\Scripts\jquery\" />
+    <Folder Include="public\Scripts\jquery\dist\" />
+    <Folder Include="public\Scripts\jquery\src\" />
+    <Folder Include="public\Scripts\jquery\src\ajax\" />
+    <Folder Include="public\Scripts\jquery\src\ajax\var\" />
+    <Folder Include="public\Scripts\jquery\src\attributes\" />
+    <Folder Include="public\Scripts\jquery\src\core\" />
+    <Folder Include="public\Scripts\jquery\src\core\var\" />
+    <Folder Include="public\Scripts\jquery\src\css\" />
+    <Folder Include="public\Scripts\jquery\src\css\var\" />
+    <Folder Include="public\Scripts\jquery\src\data\" />
+    <Folder Include="public\Scripts\jquery\src\data\var\" />
+    <Folder Include="public\Scripts\jquery\src\effects\" />
+    <Folder Include="public\Scripts\jquery\src\event\" />
+    <Folder Include="public\Scripts\jquery\src\exports\" />
+    <Folder Include="public\Scripts\jquery\src\manipulation\" />
+    <Folder Include="public\Scripts\jquery\src\manipulation\var\" />
+    <Folder Include="public\Scripts\jquery\src\queue\" />
+    <Folder Include="public\Scripts\jquery\src\sizzle\" />
+    <Folder Include="public\Scripts\jquery\src\sizzle\dist\" />
+    <Folder Include="public\Scripts\jquery\src\traversing\" />
+    <Folder Include="public\Scripts\jquery\src\traversing\var\" />
+    <Folder Include="public\Scripts\jquery\src\var\" />
+    <Folder Include="Views\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\node\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
