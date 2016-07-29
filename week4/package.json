@@ -1,0 +1,17 @@
+{
+  "name": "evacation",
+  "version": "0.0.0",
+  "description": "EVacation",
+  "main": "server.js",
+  "author": {
+    "name": "AngelValdes"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "mssql": "^3.3.0",
+    "nodemailer": "^2.5.0",
+    "vash": "^0.12.1"
+  }
+}
