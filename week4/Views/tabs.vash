@@ -1,0 +1,83 @@
+﻿@html.extend("layout", function(model){
+  @html.block("body", function(model){
+  <div id="content">
+	<h1>Welcome @model.data.first @model.data.last !</h1>
+	<h2>@model.message</h2>
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+        <li><a href="#catalog" data-toggle="tab">Catalog</a></li>
+    </ul>
+<div id="my-tab-content" class="tab-content">
+    <div class="tab-pane active" id="profile">
+        <br/>
+        <div class="mycontainer">
+            <div class="row centered-form">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">User Profile <small>Update your info!</small></h3>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/api/users/@model.data.id" method="POST">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">	
+                                            <input type="text" name="first" id="first" class="form-control input-sm" placeholder="First Name" value="@model.data.first">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="last" id="last" class="form-control input-sm" placeholder="Last Name" value="@model.data.last">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address" value="@model.data.email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password" value="@model.data.password">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="phone" id="phone" class="form-control input-sm" placeholder="Phone Number" value="@model.data.phone">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-2 pull-right">
+                                                <input type="submit" value="Save" class="btn btn-info btn-block">
+                                            </div>                                               
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+    <div class="tab-pane" id="catalog">
+		<br/>	
+		<div class="row">	
+		@model.data.products.forEach(function(item){
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3>$@item.price - @item.name</h3> 	<button class="btn btn-success">Add to cart</button>
+					</div>
+					<div class="panel-body" style="color:black;">
+							@item.description
+					</div>
+				</div>
+			</div>
+		})	
+		</div>		
+	</div>
+
+</div>
+	
+</div>
+
+
+	   
+  });
+})
